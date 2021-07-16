@@ -22,19 +22,20 @@ dark=input("[*] enter your choice: ")
 if dark == "1":
       print("")
       ip=input("[*] enter ip address: ")
-      port=input("[*] enter port: ")
       print("")
       print("    type something in the chat")
       print("")
-      netcat = "nc "+ ip+" "+ port+""
+      netcat = "nc -nv "+ ip+" 4444"
       os.system(netcat)
-elif dark == "2":   
+elif dark == "2":
       print("")
-      port=input("[*] enter port number: ")
+      print("    Hosting server")
+      time.sleep(1)
+      print("        done")
+      print("    send your ip to friends")
+      print("     so they can join you")
       print("")
-      print("    enter something in the chat")
-      print("")
-      host = "nc -l -p "+ port+""
+      host = "nc -lp 4444"
       os.system(host)
 elif dark == "3":
       print("")
